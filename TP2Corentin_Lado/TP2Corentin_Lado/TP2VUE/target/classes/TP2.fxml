@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.FXMLcontroleur">
+   <children>
+      <HBox layoutX="2.0" layoutY="86.0" prefHeight="420.0" prefWidth="650.0">
+         <children>
+            <VBox prefHeight="430.0" prefWidth="210.0">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="215.0" text="T1 ( en ms)">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tempsConso" prefHeight="34.0" prefWidth="215.0" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="215.0" text="Delta T1">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="qtelivrée" prefHeight="34.0" prefWidth="215.0" />
+                  <Button fx:id="btnDemarrer" mnemonicParsing="false" onAction="#Demarer" prefHeight="35.0" prefWidth="127.0" text="Démarrer">
+                     <VBox.margin>
+                        <Insets top="33.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label text="Quantité en stock">
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Rupture de stock">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Total des pénalités">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Stock moyen">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Cout stock moyen">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="425.0" prefWidth="190.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="190.0" text="Délais d'execution">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="25.0" prefWidth="192.0" text="Quantité">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="45.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Execution des opérations">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="60.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button fx:id="btnArreter" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#Arretter" prefHeight="35.0" prefWidth="187.0" text="Arreter">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Label text="Sommaire  des opératons">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Tableau des opérations">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="175.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="420.0" prefWidth="210.0">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="207.0" text="T2 ( en ms)">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="tempsFab" prefHeight="34.0" prefWidth="210.0" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="227.0" text="Delta T2">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="qteprod" prefHeight="34.0" prefWidth="210.0" />
+                  <Button fx:id="btnRAZ" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#remmettreAZero" prefHeight="30.0" prefWidth="152.0" text="R.A.Z">
+                     <VBox.margin>
+                        <Insets left="90.0" top="33.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="qteStock" prefHeight="30.0" prefWidth="210.0">
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="rupStock" prefHeight="30.0" prefWidth="210.0">
+                     <VBox.margin>
+                        <Insets top="7.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="tolPen" prefHeight="30.0" prefWidth="210.0">
+                     <VBox.margin>
+                        <Insets top="7.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="StockMoy" prefHeight="30.0" prefWidth="210.0">
+                     <VBox.margin>
+                        <Insets top="7.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="coutMoy" prefHeight="30.0" prefWidth="210.0">
+                     <VBox.margin>
+                        <Insets top="7.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="-2.0" layoutY="546.0" prefHeight="303.0" prefWidth="650.0">
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+         <children>
+            <TableView fx:id="resultTab" prefHeight="276.0" prefWidth="660.0">
+              <columns>
+                <TableColumn fx:id="colNum" prefWidth="81.0" text="Num" />
+                <TableColumn fx:id="colTx" prefWidth="81.0" text="T(x)" />
+                  <TableColumn fx:id="colDelta" prefWidth="81.0" text="Delta" />
+                  <TableColumn fx:id="colStock" prefWidth="81.0" text="Stock" />
+                  <TableColumn fx:id="colRs" prefWidth="81.0" text="RS" />
+                  <TableColumn fx:id="colQRS" prefWidth="81.0" text="QRS" />
+                  <TableColumn fx:id="colP" prefWidth="81.0" text="P($)" />
+                  <TableColumn fx:id="colQteMoye" prefWidth="81.0" text="QteMoy" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <MenuBar layoutX="-3.0" layoutY="-2.0" prefHeight="48.0" prefWidth="650.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Fichier">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#quitterApp" text="Quitter" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="A propos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#AfficherApropos" text="A propos" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
